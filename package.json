@@ -1,0 +1,31 @@
+{
+  "name": "flow-react-learning",
+  "version": "1.0.0",
+  "description": "Flow & React Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rifat Nabi <to.rifat@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^7.0.0",
+    "chalk": "^0.5.1",
+    "connect": "^3.3.3",
+    "gulp": "^3.8.10",
+    "reactify": "^0.17.1",
+    "serve-static": "^1.7.1",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torifat/flow-react-learning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/torifat/flow-react-learning/issues"
+  },
+  "homepage": "https://github.com/torifat/flow-react-learning"
+}
