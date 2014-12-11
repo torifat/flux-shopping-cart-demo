@@ -1,6 +1,7 @@
-/** @jsx React.DOM */
-
 var React = require('react'),
-    HelloWorld = require('./hello-world.jsx');
+    CommentBox = require('./comment-box.jsx');
 
-React.render(<HelloWorld/>, document.body);
+React.render(
+  <CommentBox/>,
+  document.getElementById('content')
+);
