@@ -8,22 +8,17 @@ var gulp = require('gulp'),
 
 var PORT = process.env.PORT || 8080;
 
-gulp.task('copy', function(){
-  gulp.src('./src/index.html')
-  .pipe(gulp.dest('./dist/'));
-});
-
 gulp.task('js', function () {
-  browserify('./src/js/app.jsx')
+  browserify('./js/app.js')
   .transform(reactify)
   .bundle()
   .pipe(source('bundle.js'))
   .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('server', ['copy', 'js'], function () {
+gulp.task('server', ['js'], function () {
   connect()
-    .use(serveStatic('./dist/'))
+    .use(serveStatic('./'))
     // .use(liveReload({ port: 35729 }))
     .listen(PORT)
     .on('listening', function () {
@@ -31,8 +26,8 @@ gulp.task('server', ['copy', 'js'], function () {
     });
 });
 
-gulp.task('watch', ['server'], function() {
-  gulp.watch('./src/js/**', ['js']);
+gulp.task('watch', ['server'], function () {
+  gulp.watch('./js/**', ['js']);
 });
 
 gulp.task('default', ['watch']);

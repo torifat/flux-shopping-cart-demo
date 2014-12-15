@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+}
+
+h2 {
+  color: #13ad46;
+}
+
+button.add2cart {
+  border: 0;
+  background: #4caf50;
+  background-image: url('../images/icons/add_to_cart.svg');
+  background-size: contain;
+  height: 32px;
+  width: 32px;
+}
