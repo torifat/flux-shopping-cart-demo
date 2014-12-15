@@ -9,6 +9,7 @@ body {
 
 h2 {
   color: #13ad46;
+  margin-left: 10px;
 }
 
 button.add2cart {
@@ -18,4 +19,13 @@ button.add2cart {
   background-size: contain;
   height: 32px;
   width: 32px;
+}
+
+table {
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+.text-right {
+  text-align: right;
 }

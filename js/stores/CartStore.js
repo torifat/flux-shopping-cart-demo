@@ -1,15 +1,24 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher'),
   EventEmitter = require('events').EventEmitter,
   CartConstants = require('../constants/CartConstants'),
-  assign = require('object-assign');
+  assign = require('object-assign'),
+  _ = require('underscore');
 
 var CHANGE_EVENT = 'change';
 
 var _products = [];
 
 function _addToCart(product) {
-  _products.push(product);
-  console.log(_products);
+  var oldProduct = _.findWhere(_products, {id: product.id});
+  if (oldProduct) {
+    oldProduct.count += 1;
+    oldProduct.subTotal += product.price;
+  } else {
+    var newProduct = _.clone(product);
+    newProduct.count = 1;
+    newProduct.subTotal = product.price;
+    _products.push(newProduct);
+  }
 }
 
 var CartStore = assign({}, EventEmitter.prototype, {

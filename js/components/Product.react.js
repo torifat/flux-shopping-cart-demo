@@ -7,7 +7,7 @@ var Product = React.createClass({
     return (
       <tr>
         <td>{this.props.value.name}</td>
-        <td>{this.props.value.price}</td>
+        <td className="text-right">${this.props.value.price}</td>
         <td><button onClick={this._onClick}>Add to Cart</button></td>
       </tr>
     );

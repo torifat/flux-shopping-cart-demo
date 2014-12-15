@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "iPhone 4S",
-    "price": "550",
+    "price": 550.00,
     "image": ""
   },
   {
     "id": 2,
     "name": "iPhone 5",
-    "price": "700",
+    "price": 700.00,
     "image": ""
   },
   {
     "id": 3,
     "name": "iPhone 6",
-    "price": "1000",
+    "price": 1000.00,
     "image": ""
   }
 ];
